@@ -13,7 +13,7 @@ const RoleDice = ({ roleDice, currentDice, handleReset }) => {
     <DiceContainer>
       <ImageContainer onClick={roleDice}>
         <img
-          src={`/src/assets/images/dice_${currentDice}.png`}
+          src={`/images/dice_${currentDice}.png`}
           alt={`dice ${currentDice}`}
         />
       </ImageContainer>

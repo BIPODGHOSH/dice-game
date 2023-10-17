@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Dialog, DialogContent } from "@mui/material";
 
 const ShowRule = ({ setShowRules, showRules }) => {
+  console.log(showRules);
   const handleClose = () => {
     setShowRules(!showRules);
   };
