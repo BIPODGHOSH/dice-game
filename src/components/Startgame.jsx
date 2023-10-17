@@ -35,7 +35,7 @@ const StartGame = () => {
     setSelectNumber(undefined);
   };
 
-  console.log(score);
+  // console.log(score);
 
   return (
     <Container>

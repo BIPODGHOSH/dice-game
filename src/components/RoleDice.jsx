@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import ShowRule from "./ShowRule";
 
 const RoleDice = ({ roleDice, currentDice, handleReset }) => {
+  const [showRules, setShowRules] = useState(false);
+
+  const handelShowRules = () => {
+    setShowRules(!showRules);
+  };
+
   return (
     <DiceContainer>
       <ImageContainer onClick={roleDice}>
@@ -13,7 +20,10 @@ const RoleDice = ({ roleDice, currentDice, handleReset }) => {
 
       <p>Click on dice to roll</p>
       <Reset onClick={handleReset}>Reset Score</Reset>
-      <Rules>Show Rules</Rules>
+      <Rules onClick={handelShowRules}>Show Rules</Rules>
+      {showRules && (
+        <ShowRule setShowRules={setShowRules} showRules={showRules} />
+      )}
     </DiceContainer>
   );
 };

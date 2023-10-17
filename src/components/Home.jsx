@@ -29,6 +29,11 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   /* overflow: hidden; */
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    width: 90%;
+  }
 `;
 
 const Left = styled.div`
@@ -36,15 +41,19 @@ const Left = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  image {
-    max-width: 50vw;
+  /* overflow: hidden; */
+  img {
+    max-width: 100%;
     max-height: 100%;
+
+    @media (max-width: 767px) {
+      width: 70%;
+    }
   }
 `;
 
 const Right = styled.div`
-  flex: 1; /* Make Right take up available space equally */
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,6 +61,10 @@ const Right = styled.div`
   h1 {
     font-size: 96px;
     white-space: nowrap;
+
+    @media (max-width: 767px) {
+      font-size: 30px;
+    }
   }
 `;
 
@@ -61,6 +74,13 @@ const Button = styled.button`
   border-radius: 5px;
   color: #fff;
   background: #000;
+
+  @media (max-width: 767px) {
+    min-width: 70px;
+    padding: 5px 5px;
+    font-size: small;
+    margin: 0 auto;
+  }
 `;
 
 const Text = styled.div`

@@ -10,7 +10,7 @@ function App() {
   const toggleGame = () => {
     setIsGameStarted(!isGameStarted);
   };
-  console.log(isGameStarted);
+  // console.log(isGameStarted);
   return (
     <>
       <FullPage>
@@ -31,6 +31,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0;
+  user-select: none;
   margin: 0 auto;
 `;
 const FullPage = styled.div`
@@ -39,4 +40,9 @@ const FullPage = styled.div`
   margin: 0px;
   width: 100vw;
   max-height: 100vh;
+
+  @media (max-width: 767px) {
+    overflow: hidden;
+    justify-content: flex-start;
+  }
 `;

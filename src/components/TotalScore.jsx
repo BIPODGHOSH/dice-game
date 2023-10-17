@@ -72,10 +72,21 @@ const NumberContainer = styled.div`
     background-color: gray;
     color: #fff;
   }
+
+  @media (max-width: 767px) {
+    height: 20px;
+    margin: 0px 0px;
+    width: 30px;
+    padding: 5px 0;
+  }
 `;
 
 const Error = styled.p`
   margin-left: 22%;
   height: 20px;
   color: red;
+
+  @media (max-width: 767px) {
+    margin-left: 0;
+  }
 `;
